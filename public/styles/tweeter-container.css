@@ -1,0 +1,46 @@
+article.tweet {
+  margin: 40px;
+  padding: 30px;
+  border: 0.2rem solid black;
+}
+
+article.tweet header{
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article.tweet footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.3rem solid black;
+  font-size: 0.8em;
+  font-family: sans-serif;
+}
+
+article.tweet footer div{
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(4, 4, 121);
+  cursor: pointer;
+}
+
+article.tweet footer div i:hover{
+  color: rgb(191, 155, 9);
+}
+
+.user-profile {
+  display: flex;
+  height: 50px;
+}
+
+.username {
+  color: rgba(73, 95, 123, 0.315);
+  font-weight: bold;
+}

@@ -1,29 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+    rel="stylesheet">
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweeter-container.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="./scripts/composer-char-counter.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+    <div class="navbar-right">
+      <p><strong>Write</strong> a new tweet</p>
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </nav>
+
+  <header class="profile">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>ABC DEFG</h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main id="tweeter-board" class="container">
+    <section class="new-tweet">
+      <h2 class="title">Compose Tweet</h2>
+      <form class="form" method="POST" action="/tweets">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="button-character-count">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+
+    <article class="tweet">
+      <header>
+        <div class="user-profile">
+          <p>🤣</p>
+          <p class="name">&nbsp&nbsp Newton</p>
+        </div>
+        <p class="username">@SirIsaac</p>
+      </header>
+      <p>Hello there, whats your name?</p>
+      <footer>
+        <p>10 fays ago</p>
+        <div>
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+</body>
+
 </html>

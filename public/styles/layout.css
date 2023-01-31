@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -16,8 +17,24 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #fff;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F2EFEA;;
+  border-radius: 20px;
+  
 }
 
 /*
