@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">Tweeter is a simple, single-page Twitter clone. The app uses HTML, CSS, JS, <a href="https://jquery.com/">jQuery</a> and AJAX for front-end and <a href="https://nodejs.org/en/">Node.js</a> (<a href="https://expressjs.com/">Express.js</a>) for backend.</h4>
+<h4 align="center">Tweeter is a simple, single-page Twitter clone. The app uses HTML, CSS, JS, <a href="https://jquery.com/">jQuery</a> and AJAX for frontend and <a href="https://nodejs.org/en/">Node.js</a> (<a href="https://expressjs.com/">Express.js</a>) for backend.</h4>
 
 <p align="center">
   <a href="#final-product">Final Product</a> •
