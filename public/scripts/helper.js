@@ -19,6 +19,13 @@ const countingCharacter = (counterEle, $errorBar, tweet) => {
 };
 
 
+// Toggle compose box
+const toggleComposeBox = ($newTweet) => {
+  $newTweet.slideToggle();
+  $("#tweet-text").focus();
+};
+
+
 // Loading tweets functions
 const customEscape = function(str) {
   let div = document.createElement("div");
@@ -31,7 +38,7 @@ const createTweetElement = (tweet) => {
     <header>
     <img class="individualProfile" src='${tweet.user.avatars ? tweet.user.avatars : "http://via.placeholder.com/300"}'/>
     <div class="user-profile">
-      <div class="name">&nbsp&nbsp ${tweet.user.name}</div>
+      <div class="name">${tweet.user.name}</div>
       <div class="username">${tweet.user.handle}</div> 
     </div>
   </header>
@@ -72,6 +79,7 @@ const sendTweet = (context) => {
     success: () => loadTweets(),
   });
   $("#tweet-text").val('');
+  $(".counter").text("140");
 };
 
 const validateForm = (context) => {
@@ -97,8 +105,10 @@ const scrollingBehavior = ($floatButton, context) => {
   }
 };
 
+
 // Floating button function -> scroll to the top
 const scrollToTop = ($newTweet) => {
   $newTweet.slideDown();
   $("html").animate({ scrollTop: 0 }, "slow");
+  $("#tweet-text").focus();
 };

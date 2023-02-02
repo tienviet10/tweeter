@@ -13,7 +13,7 @@ $(() => {
   // Toggle the "Write a new Tweet" button in the navbar
   const $newTweet = $(".new-tweet");
   $(".navbar-right").on("click", () => {
-    $newTweet.slideToggle();
+    toggleComposeBox($newTweet);
   });
 
   // When user scroll -> display the arrow up (to top of the page) button

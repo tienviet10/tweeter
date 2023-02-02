@@ -49,7 +49,7 @@ article.tweet:hover {
 
 article.tweet header{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 article.tweet p{
@@ -81,6 +81,7 @@ article.tweet footer div i:hover{
 .user-profile {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .individualProfile{
@@ -91,12 +92,13 @@ article.tweet footer div i:hover{
   display: flex;
   justify-content: flex-end;
   font-weight: 600;
+  margin-left: 15px;
 }
 
 .username {
   color: rgba(73, 95, 123, 0.315);
   font-weight: bold;
-  margin-left: 60px;
+  margin-left: 15px;
 }
 
 .description {
@@ -131,6 +133,10 @@ article.tweet footer div i:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .username {
+    margin-left: 60px;
   }
 
   article.tweet {
