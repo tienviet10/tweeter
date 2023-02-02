@@ -34,24 +34,25 @@ const customEscape = function(str) {
 };
 
 const createTweetElement = (tweet) => {
-  const $tweet = $(`<article class="tweet">
-    <header>
-    <img class="individualProfile" src='${tweet.user.avatars ? tweet.user.avatars : "http://via.placeholder.com/300"}'/>
-    <div class="user-profile">
-      <div class="name">${tweet.user.name}</div>
-      <div class="username">${tweet.user.handle}</div> 
-    </div>
-  </header>
-  <p class="description">${customEscape(tweet.content.text)}</p>
-  <footer>
-    <p>${timeago.format(tweet.created_at)}</p>
-    <div>
-      <i class="fa-solid fa-flag"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-heart"></i>
-    </div>
-  </footer>
-  </article>`);
+  const $tweet = $(`
+    <article class="tweet">
+      <header>
+        <img class="individualProfile" src='${tweet.user.avatars ? tweet.user.avatars : "http://via.placeholder.com/300"}'/>
+        <div class="user-profile">
+          <div class="name">${tweet.user.name}</div>
+          <div class="username">${tweet.user.handle}</div> 
+        </div>
+      </header>
+      <p class="description">${customEscape(tweet.content.text)}</p>
+      <footer>
+        <p>${timeago.format(tweet.created_at)}</p>
+        <div>
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>`);
   return $tweet;
 };
 
