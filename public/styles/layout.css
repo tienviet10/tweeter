@@ -14,7 +14,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: rgb(222, 230, 238);
@@ -34,8 +33,8 @@ main {
   align-items: center;
 }
 
-/* Main page components */
 
+/* Main page components */
 .float{
 	position:fixed;
 	width:60px;
@@ -61,6 +60,7 @@ main {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
