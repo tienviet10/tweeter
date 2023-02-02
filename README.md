@@ -1,18 +1,68 @@
-# Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+<h1 align="center">
+  <br>
+  Tweeter Project
+  <br>
+</h1>
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+<h4 align="center">Tweeter is a simple, single-page Twitter clone. The app uses HTML, CSS, JS, <a href="https://jquery.com/">jQuery</a> and AJAX for front-end and <a href="https://nodejs.org/en/">Node.js</a> (<a href="https://expressjs.com/">Express.js</a>) for backend.</h4>
 
-## Getting Started
+<p align="center">
+  <a href="#final-product">Final Product</a> •
+  <a href="#dependencies">Dependencies</a> •
+  <a href="#getting-started">Getting Started</a>
+</p>
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+
+
+## Final Product
+
+!["Screenshot of URLs page - Not Login"](https://github.com/tienviet10/tinyapp/blob/main/docs/urls-no-login.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/tienviet10/tinyapp/blob/main/docs/urls.png?raw=true)
+!["Screenshot of Editting page"](https://github.com/tienviet10/tinyapp/blob/main/docs/edit-short-url.png?raw=true)
+!["Screenshot of Login page"](https://github.com/tienviet10/tinyapp/blob/main/docs/login.png?raw=true)
+!["Screenshot of Registration page"](https://github.com/tienviet10/tinyapp/blob/main/docs/register-account.png?raw=true)
+
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+**Dependencies**
+
+- [Node.js 5.10.x or above](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+
+
+## Getting Started
+
+**Prerequisites**
+
+The following applications should be installed in your system:
+* [Git](https://git-scm.com) 
+* [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))
+
+
+**Server**
+
+1. Create a folder and clone this repository
+
+```sh
+$ git clone https://github.com/tienviet10/tweeter.git
+```
+
+2. Move to the correct directory
+
+```sh
+$ cd tweeter
+```
+
+3. Install dependencies
+
+```sh
+$ npm install
+```
+
+4. Run the development web server. The app will be served at <http://localhost:8080/>.
+
+```sh
+$ npm run local
+```
