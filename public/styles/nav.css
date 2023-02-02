@@ -16,6 +16,9 @@ nav {
 
 nav span {
   font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-right {
