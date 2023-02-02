@@ -3,6 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+:root {
+  --primary-color-mobile: #CD8F35;
+  --primary-color-desktop: #4056A1;
+  --button-color: #00008e;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -47,7 +53,7 @@ main {
   justify-content: center;
   align-items: center;
 
-	background-color:#CD8F35;
+	background-color: var(--primary-color-mobile);
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -77,6 +83,6 @@ main {
   }
 
   .float {
-    background-color: #4056A1;
+    background-color: var(--primary-color-desktop);
   }
 }

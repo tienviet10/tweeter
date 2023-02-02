@@ -2,7 +2,7 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #CD8F35;
+  background-color: var(--primary-color-mobile);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFFFFF;
   padding: 1.5em;
@@ -53,7 +53,7 @@ nav i {
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: var(--primary-color-desktop);
     background-image: none;
   }
 }

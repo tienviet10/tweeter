@@ -70,12 +70,12 @@ article.tweet footer div{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(4, 4, 121);
+  color: var(--button-color);
   cursor: pointer;
 }
 
 article.tweet footer div i:hover{
-  color: rgb(191, 155, 9);
+  color: var(--primary-color-mobile);
 }
 
 .user-profile {

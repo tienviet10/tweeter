@@ -2,7 +2,7 @@
 header.profile {
   height: 400px;
   width: 100%;
-  background-color: #CD8F35;
+  background-color: var(--primary-color-mobile);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 
   display: flex;
@@ -19,6 +19,6 @@ main header div h2 {
 @media only screen and (min-width: 1024px) {
   header.profile {  
     border-radius: 20px;
-    background-color: #4056A1;
+    background-color: var(--primary-color-desktop);
   }
 }

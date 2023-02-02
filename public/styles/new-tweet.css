@@ -6,7 +6,7 @@
 .title {
   padding-top: 0;
   margin-top: 0;
-  color: #4056A1;
+  color: var(--primary-color-desktop);
 }
 
 .form {
@@ -31,7 +31,7 @@ textarea {
 }
 
 button {
-  background-color: rgb(0, 0, 142);
+  background-color: var(--button-color);
   color: white;
   cursor: pointer;
 }
