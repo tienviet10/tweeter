@@ -26,10 +26,13 @@
 ## Dependencies
 
 **Dependencies**
-
-- [Node.js 5.10.x or above](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
+- [MD5](https://github.com/pvorb/node-md5#readme)
+- [Chance](https://chancejs.com/)
+- [Body Parser](https://github.com/expressjs/body-parser#readme)
 
+**Dev-dependencies**
+- [Nodemon](https://nodemon.io/)
 
 ## Getting Started
 
@@ -37,7 +40,7 @@
 
 The following applications should be installed in your system:
 * [Git](https://git-scm.com) 
-* [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))
+* [Node.js 5.10.x or above](https://nodejs.org/en/)
 
 
 **Server**
