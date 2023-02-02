@@ -149,23 +149,21 @@ article.tweet footer div i:hover {
   flex-direction: column;
   align-items: flex-start;
 }
-
-.individualProfile {
-  height: 50px;
-  width: 50px;
-}
-
-.name {
+.user-profile .name {
   display: flex;
   justify-content: flex-end;
   font-weight: 600;
   margin-left: 15px;
 }
-
-.username {
+.user-profile .username {
   color: rgba(73, 95, 123, 0.315);
   font-weight: bold;
   margin-left: 15px;
+}
+
+.individualProfile {
+  height: 50px;
+  width: 50px;
 }
 
 .description {
