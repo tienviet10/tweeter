@@ -1,3 +1,5 @@
+@use 'layout';
+
 /* The main container includes the validation error message, tweet container (except new-tweet), and tweets (old tweets)*/
 .main-containers {
   display: flex;
@@ -40,42 +42,43 @@ article.tweet {
   margin: 50px 0px;
   padding: 10px;
   border: 0.2rem solid black;
-  
-}
 
-article.tweet:hover {
-  box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
-}
+  &:hover {
+    box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
+  } 
 
-article.tweet header{
-  display: flex;
-  justify-content: flex-start;
-}
+  header {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-article.tweet p{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-article.tweet footer{
-  display: flex;
-  justify-content: space-between;
-  border-top: 0.3rem solid black;
-  font-size: 0.8em;
-  font-family: sans-serif;
-}
+  footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.3rem solid black;
+    font-size: 0.8em;
+    font-family: sans-serif;
 
-article.tweet footer div{
-  width: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgb(4, 4, 121);
-  cursor: pointer;
-}
+    div {
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: layout.$button-color;
+      cursor: pointer;
 
-article.tweet footer div i:hover{
-  color: rgb(191, 155, 9);
+      i{
+        &:hover{
+          color: layout.$primary-color-mobile;
+        }
+      }
+    }
+  }
 }
 
 .user-profile {
@@ -121,14 +124,18 @@ article.tweet footer div i:hover{
 
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
-  main .profile {
-    width: 30%;
-    max-width: 500px;
-    margin: 40px 0 0 40px;
+  main {
+    .profile {
+      width: 30%;
+      max-width: 500px;
+      margin: 40px 0 0 40px;
+    }
   }
 
-  main .main-containers {
-    width: 70%;
+  main {
+    .main-containers {
+      width: 70%;
+    }
   }
   
   .tweets-container{

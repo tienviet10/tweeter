@@ -1,23 +1,94 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: rgb(222, 230, 238);
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+/* Main page components */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CD8F35;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  cursor: pointer;
+  display: none;
+}
+.float:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+  main {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .float {
+    background-color: #4056A1;
+  }
+}
 /* Header includes account owner avatar and name */
-header.profile {
+main header.profile {
   height: 400px;
   width: 100%;
   background-color: #CD8F35;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-main header div h2 {
+main header.profile div h2 {
   color: white;
 }
 
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
-  header.profile {  
+  main header.profile {
     border-radius: 20px;
     background-color: #4056A1;
   }

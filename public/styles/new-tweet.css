@@ -1,3 +1,76 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: rgb(222, 230, 238);
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+/* Main page components */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CD8F35;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  cursor: pointer;
+  display: none;
+}
+.float:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+  main {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .float {
+    background-color: #4056A1;
+  }
+}
 /* All CSS components for adding a new tweet */
 .new-tweet {
   padding: 20px;
@@ -27,15 +100,14 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 
 button {
-  background-color: rgb(0, 0, 142);
+  background-color: #00008e;
   color: white;
   cursor: pointer;
 }
-
 button:hover {
   -webkit-transform: scale(1.1);
   transform: translateY(-4px);

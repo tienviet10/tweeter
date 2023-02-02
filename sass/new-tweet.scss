@@ -1,3 +1,5 @@
+@use 'layout';
+
 /* All CSS components for adding a new tweet */
 .new-tweet {
   padding: 20px;
@@ -6,7 +8,7 @@
 .title {
   padding-top: 0;
   margin-top: 0;
-  color: #4056A1;
+  color: layout.$primary-color-desktop;
 }
 
 .form {
@@ -31,15 +33,15 @@ textarea {
 }
 
 button {
-  background-color: rgb(0, 0, 142);
+  background-color: layout.$button-color;
   color: white;
   cursor: pointer;
-}
 
-button:hover {
-  -webkit-transform: scale(1.1);
-  transform: translateY(-4px);
-  box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
+  }
 }
 
 .error {

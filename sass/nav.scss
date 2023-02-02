@@ -1,8 +1,10 @@
+@use 'layout';
+
 /* Styling for navbar */
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #CD8F35;
+  background-color: layout.$primary-color-mobile;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFFFFF;
   padding: 1.5em;
@@ -12,13 +14,17 @@ nav {
   
   display: flex;
   justify-content: space-between;
-}
 
-nav span {
-  font-family: 'Bungee', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  span {
+    font-family: 'Bungee', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    color: red;
+  }
 }
 
 .navbar-right {
@@ -28,8 +34,10 @@ nav span {
   cursor: pointer;
 }
 
-.navbar-right i{
-  animation: MoveUpDown 1.6s linear infinite;
+.navbar-right {
+  i {
+    animation: MoveUpDown 1.6s linear infinite;
+  }
 }
 
 p {
@@ -37,9 +45,6 @@ p {
   padding: 0;
 }
 
-nav i {
-  color: red;
-}
 
 @keyframes MoveUpDown {
   0%, 100% {
@@ -53,7 +58,7 @@ nav i {
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: layout.$primary-color-desktop;
     background-image: none;
   }
 }

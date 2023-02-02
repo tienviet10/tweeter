@@ -1,3 +1,76 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: rgb(222, 230, 238);
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+/* Main page components */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CD8F35;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  cursor: pointer;
+  display: none;
+}
+.float:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+  main {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .float {
+    background-color: #4056A1;
+  }
+}
 /* The main container includes the validation error message, tweet container (except new-tweet), and tweets (old tweets)*/
 .main-containers {
   display: flex;
@@ -28,7 +101,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F2EFEA;;
+  background-color: #F2EFEA;
   border-radius: 20px;
 }
 
@@ -40,42 +113,35 @@ article.tweet {
   margin: 50px 0px;
   padding: 10px;
   border: 0.2rem solid black;
-  
 }
-
 article.tweet:hover {
   box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
 }
-
-article.tweet header{
+article.tweet header {
   display: flex;
   justify-content: flex-start;
 }
-
-article.tweet p{
+article.tweet p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-article.tweet footer{
+article.tweet footer {
   display: flex;
   justify-content: space-between;
   border-top: 0.3rem solid black;
   font-size: 0.8em;
   font-family: sans-serif;
 }
-
-article.tweet footer div{
+article.tweet footer div {
   width: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(4, 4, 121);
+  color: #00008e;
   cursor: pointer;
 }
-
-article.tweet footer div i:hover{
-  color: rgb(191, 155, 9);
+article.tweet footer div i:hover {
+  color: #CD8F35;
 }
 
 .user-profile {
@@ -84,10 +150,11 @@ article.tweet footer div i:hover{
   align-items: flex-start;
 }
 
-.individualProfile{
+.individualProfile {
   height: 50px;
   width: 50px;
 }
+
 .name {
   display: flex;
   justify-content: flex-end;
@@ -106,7 +173,6 @@ article.tweet footer div i:hover{
   font-weight: 500;
 }
 
-
 /* Tablet Styles */
 @media only screen and (min-width: 420px) {
   .user-profile {
@@ -117,8 +183,6 @@ article.tweet footer div i:hover{
     align-items: center;
   }
 }
-
-
 /* Resizing for Desktop */
 @media only screen and (min-width: 1024px) {
   main .profile {
@@ -126,19 +190,15 @@ article.tweet footer div i:hover{
     max-width: 500px;
     margin: 40px 0 0 40px;
   }
-
   main .main-containers {
     width: 70%;
   }
-  
-  .tweets-container{
+  .tweets-container {
     width: 80%;
   }
-
   #tweets {
     padding: 40px;
   }
-
   .user-profile {
     width: 100%;
     display: flex;
@@ -146,20 +206,16 @@ article.tweet footer div i:hover{
     justify-content: space-between;
     align-items: center;
   }
-
   .username {
     margin-left: 60px;
   }
-
   article.tweet {
-    padding: 30px;   
+    padding: 30px;
   }
-
   .description {
     font-size: 24px;
   }
 }
-
 @media only screen and (min-width: 1440px) {
   .main-containers {
     width: 50%;
