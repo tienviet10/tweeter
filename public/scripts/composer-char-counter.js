@@ -1,12 +1,12 @@
 /* eslint-env jquery */
 
-$(document).ready(function() {
-
+// Counting characters in textarea and trigger error bar/styles if needed
+$(() => {
   const counterEle = $(".counter");
-  $("#tweet-text").on('input', function() {
-    console.log(this); //The this keyword is a reference to the button
+  const $errorBar = $('.bar');
 
-    counterEle.text(140 - this.value.length);
+  $("#tweet-text").on('input', function() {
+    countingCharacter(counterEle, $errorBar, this.value);
   });
 });
 

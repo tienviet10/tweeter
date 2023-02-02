@@ -1,9 +1,9 @@
+/* Styling for navbar */
 nav {
-  position: fixed;
-  top: 0;
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: #CD8F35;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFFFFF;
   padding: 1.5em;
 
@@ -19,6 +19,11 @@ nav span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+
+.navbar-right i{
+  animation: MoveUpDown 1.6s linear infinite;
 }
 
 p {
@@ -28,4 +33,21 @@ p {
 
 nav i {
   color: red;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
 }

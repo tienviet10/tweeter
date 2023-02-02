@@ -17,8 +17,8 @@ html {
 
 body {
   color: #545149;
-  background-color: #fff;
-  font-size: 24px;
+  background-color: rgb(222, 230, 238);
+  font-size: 20px;
   font-family: 'Source Sans Pro', sans-serif;
 
   display: flex;
@@ -27,16 +27,55 @@ body {
 }
 
 main {
-  width: 80%;
-  margin-top: 60px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F2EFEA;;
-  border-radius: 20px;
-  
+  align-items: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Main page components */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	background-color:#CD8F35;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+  cursor: pointer;
+
+  display: none;
+}
+
+.float:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+  
+  main {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .float {
+    background-color: #4056A1;
+  }
+}

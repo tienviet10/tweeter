@@ -5,6 +5,9 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
+  <!-- Enable mobile view -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -23,6 +26,16 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./scripts/constants.js"></script>
+  <script src="./scripts/helper.js"></script>
+  <script src="./scripts/composer-char-counter.js"></script>
+
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 
@@ -31,14 +44,10 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Script -->
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <script src="./scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
+  <!-- Top nav bar -->
   <nav>
     <span>tweeter</span>
     <div class="navbar-right">
@@ -47,49 +56,44 @@
     </div>
   </nav>
 
-  <header class="profile">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>ABC DEFG</h2>
-    </div>
-  </header>
+  <main>
+    <!-- Header (Your own profile) -->
+    <header class="profile">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <div>
+        <h2>You You</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main id="tweeter-board" class="container">
-    <section class="new-tweet">
-      <h2 class="title">Compose Tweet</h2>
-      <form class="form" method="POST" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="button-character-count">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+    <div class="main-containers">
+      <!-- Form Error Message -->
+      <div class="bar error-message">Error message</div>
 
-    <article class="tweet">
-      <header>
-        <div class="user-profile">
-          <p>🤣</p>
-          <p class="name">&nbsp&nbsp Newton</p>
-        </div>
-        <p class="username">@SirIsaac</p>
-      </header>
-      <p>Hello there, whats your name?</p>
-      <footer>
-        <p>10 fays ago</p>
-        <div>
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-      </footer>
-    </article>
+      <div class="tweets-container">
+        <!-- Compose a new tweet -->
+        <section class="new-tweet">
+          <h2 class="title">Compose Tweet</h2>
+          <form class="form" method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="button-character-count">
+              <button id="submit-btn" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <!-- Display all tweets -->
+        <section id="tweets"></section>
+      </div>
+    </div>
   </main>
+
+  <!-- Floating Button (scroll to the top) -->
+  <div class="float">
+    <i class="fa-solid fa-angles-up"></i>
+  </div>
 
 </body>
 
