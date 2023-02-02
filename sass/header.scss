@@ -1,0 +1,24 @@
+/* Header includes account owner avatar and name */
+header.profile {
+  height: 400px;
+  width: 100%;
+  background-color: #CD8F35;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main header div h2 {
+  color: white;
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  header.profile {  
+    border-radius: 20px;
+    background-color: #4056A1;
+  }
+}

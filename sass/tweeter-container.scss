@@ -1,0 +1,167 @@
+/* The main container includes the validation error message, tweet container (except new-tweet), and tweets (old tweets)*/
+.main-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  width: 80%;
+  padding: 10px;
+  margin: 20px 20px 0 20px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.error-message {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+}
+
+.tweets-container {
+  width: 90%;
+  margin: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F2EFEA;;
+  border-radius: 20px;
+}
+
+#tweets {
+  padding: 15px;
+}
+
+article.tweet {
+  margin: 50px 0px;
+  padding: 10px;
+  border: 0.2rem solid black;
+  
+}
+
+article.tweet:hover {
+  box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
+}
+
+article.tweet header{
+  display: flex;
+  justify-content: flex-start;
+}
+
+article.tweet p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article.tweet footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.3rem solid black;
+  font-size: 0.8em;
+  font-family: sans-serif;
+}
+
+article.tweet footer div{
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(4, 4, 121);
+  cursor: pointer;
+}
+
+article.tweet footer div i:hover{
+  color: rgb(191, 155, 9);
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.individualProfile{
+  height: 50px;
+  width: 50px;
+}
+.name {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.username {
+  color: rgba(73, 95, 123, 0.315);
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 420px) {
+  .user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  main .profile {
+    width: 30%;
+    max-width: 500px;
+    margin: 40px 0 0 40px;
+  }
+
+  main .main-containers {
+    width: 70%;
+  }
+  
+  .tweets-container{
+    width: 80%;
+  }
+
+  #tweets {
+    padding: 40px;
+  }
+
+  .user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .username {
+    margin-left: 60px;
+  }
+
+  article.tweet {
+    padding: 30px;   
+  }
+
+  .description {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-containers {
+    width: 50%;
+  }
+}

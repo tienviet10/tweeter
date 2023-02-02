@@ -1,0 +1,54 @@
+/* All CSS components for adding a new tweet */
+.new-tweet {
+  padding: 20px;
+}
+
+.title {
+  padding-top: 0;
+  margin-top: 0;
+  color: #4056A1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  font-family: serif;
+  outline: 0;
+  border-width: 0 0 3px;
+  background-color: #F2EFEA;
+  border-color: black;
+  margin-top: 10px;
+}
+
+.button-character-count {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-family: 'Bungee', sans-serif;
+}
+
+button {
+  background-color: rgb(0, 0, 142);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 2px 1px rgba(21, 92, 223, 0.2);
+}
+
+.error {
+  color: red;
+}
+
+/* Resizing for Desktop */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    padding: 40px;
+  }
+}
