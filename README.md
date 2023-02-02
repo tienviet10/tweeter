@@ -20,8 +20,8 @@
 !["Screenshot of Main Page (Desktop view)"](https://raw.githubusercontent.com/tienviet10/tweeter/master/docs/tweet_home_page-desktop_view.png)
 !["Screenshot of Main Page (Nest Hub Max view)"](https://raw.githubusercontent.com/tienviet10/tweeter/master/docs/Nest_Hub_Max-desktop_view.png)
 !["Screenshot of Main Page (Mobile view)"](https://raw.githubusercontent.com/tienviet10/tweeter/master/docs/tweet_header-mobile_view.png)
+!["Screenshot of Scroll (Tablet view)"]()
 !["Screenshot of Scroll (Mobile view)"](https://raw.githubusercontent.com/tienviet10/tweeter/master/docs/tweet_scroll-mobile_view-.png)
-
 
 ## Dependencies
 
