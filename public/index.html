@@ -32,7 +32,6 @@
       integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./scripts/constants.js"></script>
-    <script src="./scripts/helper.js"></script>
     <script src="./scripts/composer-char-counter.js"></script>
 
     <!-- App JS -->
@@ -74,7 +73,7 @@
           <!-- Compose a new tweet -->
           <section class="new-tweet">
             <h2 class="title">Compose Tweet</h2>
-            <form class="form" method="POST" action="/tweets">
+            <form class="form">
               <label for="tweet-text">What are you humming about?</label>
               <textarea name="text" id="tweet-text"></textarea>
               <div class="button-character-count">
