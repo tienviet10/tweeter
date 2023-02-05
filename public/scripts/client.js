@@ -75,13 +75,13 @@
   };
 
   const loadTweets = () => {
-    $.get(tweetRequest).then(data => renderTweets(data));
+    $.get(TWEET_REQUEST).then(data => renderTweets(data));
   };
 
 
   // Sending a tweet functions
   const sendTweet = (context, $textArea) => {
-    $.post(tweetRequest, context.serialize()).then(() => {
+    $.post(TWEET_REQUEST, context.serialize()).then(() => {
       $textArea.val('').trigger('input');
       loadTweets();
     });
